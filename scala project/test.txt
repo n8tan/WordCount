@@ -1,0 +1,3 @@
+(APPLE ,4)
+(PEN,4)
+(PINEAPPLE,1)
