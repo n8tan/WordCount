@@ -1,15 +1,13 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import  java.io._;
 
-/**
-  * Created by 201403242 on 10/1/2016.
-  */
-object out {
+
+import java.io.File
+import java.io._
+
+import scala.collection.immutable.ListMap;
+
+object WordCount {
   def main(args: Array[String]) {
-    var output = scala.io.Source.fromFile("D:\\Github Repositories\\WordCount\\Sample Text.txt")
+    val output = scala.io.Source.fromFile("D:\\Github Repositories\\WordCount\\Sample Text.txt")
 
       .getLines
       .flatMap(_.split("\\W+"))
@@ -21,10 +19,11 @@ object out {
 
       }
 
-    val writer = new PrintWriter(new File("test2.txt" ))
+    val sortedOutput = ListMap(output.toSeq.sortWith(_._1 < _._1):_*)
 
+    val writer = new PrintWriter(new File("test4.txt" ))
 
-    for(a <- output) {
+    for(a <- sortedOutput) {
       writer.write(a.toString() + "\n")
     }
     writer.close()
