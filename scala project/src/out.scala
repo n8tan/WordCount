@@ -9,7 +9,7 @@ import  java.io._;
   */
 object out {
   def main(args: Array[String]) {
-    var output = scala.io.Source.fromFile("C:\\Users\\201403242\\Documents\\scalatest.txt")
+    var output = scala.io.Source.fromFile("D:\\Github Repositories\\WordCount\\Sample Text.txt")
 
       .getLines
       .flatMap(_.split("\\W+"))
@@ -21,7 +21,7 @@ object out {
 
       }
 
-    val writer = new PrintWriter(new File("test.txt" ))
+    val writer = new PrintWriter(new File("test2.txt" ))
 
 
     for(a <- output) {
