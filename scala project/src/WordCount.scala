@@ -7,7 +7,7 @@ import scala.collection.immutable.ListMap;
 
 object WordCount {
   def main(args: Array[String]) {
-    val output = scala.io.Source.fromFile("D:\\Github Repositories\\WordCount\\Sample Text.txt")
+    val output = scala.io.Source.fromFile("D:\\Github Repositories\\bes.txt","ISO-8859-1")
 
       .getLines
       .flatMap(_.split("\\W+"))
