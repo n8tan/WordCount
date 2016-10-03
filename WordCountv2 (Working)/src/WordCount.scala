@@ -19,7 +19,7 @@ object WordCount {
 
       }
 
-    val sortedOutput = ListMap(output.toSeq.sortWith(_._1 < _._1):_*)
+    val sortedOutput = ListMap(output.toSeq.sortWith(_._1.toLowerCase < _._1.toLowerCase):_*)
 
     val writer = new PrintWriter(new File("test5.txt" ))
 
